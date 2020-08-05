@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    background: #333;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header h1{
+    color: #fff;
+    font-size: 3rem;
+    padding: .5rem;
+    margin: .5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 425px;
+    margin: auto;
+}
+
+.grid {
+    border: #dcd6bc solid .5rem;
+    background: #dcd6bc;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 1rem;
+}
+
+.grid div {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    font-size: 25px;
+    text-align: center;
+}
+
+div.checked {
+    border: 2px solid;
+    border-color: #9c998d;
+    background-color: #cecab7;
+}
+
+.flags {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.result {
+    color: #e76346;
+    text-align: center;
+    font-size: 30px;
+}
