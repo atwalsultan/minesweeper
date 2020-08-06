@@ -31,7 +31,7 @@ for(let i=0; i<width*width; i++) {
         click(cell);
     });
 
-    // Cntrl and left click
+    // Right click
     cell.oncontextmenu = function(e) {
         e.preventDefault();
         addFlag(cell);
@@ -71,19 +71,21 @@ for(let i=0; i<cells.length; i++) {
 // Add flag with right click
 function addFlag(cell) {
     if(isGameOver) return;
-    if(!cell.classList.contains('checked') && (flags < numberBombs)) {
-        if(!cell.classList.contains('flag')) {
+    if(!cell.classList.contains('checked')) {
+        // Remove flag
+        if(cell.classList.contains('flag') && (flags <= numberBombs)) {
+            cell.classList.remove('flag');
+            cell.innerHTML = '';
+            flags--;
+            flagsLeft.innerHTML = numberBombs - flags;
+        }
+        // Add flag
+        else if(!cell.classList.contains('flag') && (flags < numberBombs)){
             cell.classList.add('flag');
             cell.innerHTML = '🚩';
             flags++;
             flagsLeft.innerHTML = numberBombs - flags;
             checkWin();
-        }
-        else{
-            cell.classList.remove('flag');
-            cell.innerHTML = '';
-            flags--;
-            flagsLeft.innerHTML = numberBombs - flags;
         }
     }
 }
