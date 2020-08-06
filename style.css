@@ -67,10 +67,15 @@ div.checked {
     color: #fff;
     background-color: #1b9b1b;
     border-radius: 5px;
+    transition: 0.15s all; 
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.85;
+}
+
+.btn:active { 
+    transform: scale(0.9); 
 }
 
 #refresh {
