@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -12,8 +13,9 @@
     </header>
     <div class="container">
         <div class="grid"></div>
-        <div class="result"></div>
         <div class="flags">Flags Left: <span class="flags_left"></span></div>
+        <button class="btn" id="refresh"><i class="fas fa-redo"></i>Refresh</button>
+        <div class="result"></div>
     </div>
 
     <script src="app.js"></script>

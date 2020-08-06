@@ -22,6 +22,7 @@ header h1{
 .container {
     max-width: 425px;
     margin: auto;
+    text-align: center;
 }
 
 .grid {
@@ -38,7 +39,6 @@ header h1{
     border: 5px solid;
     border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
     font-size: 25px;
-    text-align: center;
 }
 
 div.checked {
@@ -50,11 +50,34 @@ div.checked {
 .flags {
     color: #fff;
     font-size: 25px;
-    text-align: center;
+    display: inline-block;
 }
 
 .result {
     color: #e76346;
-    text-align: center;
-    font-size: 30px;
+    font-size: 2.5rem;
+}
+
+.btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1b9b1b;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+#refresh {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+i {
+    margin-right: 5px;
 }
