@@ -2,9 +2,12 @@
 
 The classic Minesweeper game. Built using Vanilla JavaScript, HTML and CSS.
 
-## Project Specifications
+## Project Specifications/Features
 
+- Makes use of recursion to implement game logic.
 - Uses CSS grid layout to display cells.
+- Choose difficulty level (number of bombs) from a dropdown list.
+- Start a new game by clicking the _Refresh_ button.
 - Fully responsive to changes in window size.
 
 ## Rules
