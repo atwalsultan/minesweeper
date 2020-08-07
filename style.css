@@ -28,18 +28,52 @@ header h1{
 
 .options {
     background: #dcd6bc;
-    padding: .5rem;
-    padding-bottom: 0;
-    text-align: left;
+    padding: .25rem 0 0 .5rem;
 }
 
-.options select{
-    font-size: 1rem;
+.options select {
+    background-color: #f4f4f4;
+    font-size: 1.25rem;
     padding: .25rem;
     outline: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Roboto', Arial, sans-serif;
+}
+
+.flags {
+    font-size: 25px;
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+.btn {
+    padding: 0.4rem 0.8rem;
+    margin: 0;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1b9b1b;
+    border-radius: 5px;
+    transition: 0.15s all; 
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn:active { 
+    transform: scale(0.9); 
+}
+
+#refresh {
+    margin-left: 3rem;
+}
+
+i {
+    margin-right: 5px;
 }
 
 .grid {
@@ -64,42 +98,7 @@ div.checked {
     background-color: #cecab7;
 }
 
-.flags {
-    color: #fff;
-    font-size: 25px;
-    display: inline-block;
-}
-
 .result {
     color: #e76346;
     font-size: 2.5rem;
-}
-
-.btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #1b9b1b;
-    border-radius: 5px;
-    transition: 0.15s all; 
-}
-
-.btn:hover {
-    opacity: 0.85;
-}
-
-.btn:active { 
-    transform: scale(0.9); 
-}
-
-#refresh {
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-}
-
-i {
-    margin-right: 5px;
 }
