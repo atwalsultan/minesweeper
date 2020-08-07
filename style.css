@@ -14,15 +14,32 @@ header h1{
     color: #fff;
     font-size: 3rem;
     padding: .5rem;
+    padding-top: 0;
     margin: .5rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .container {
     max-width: 425px;
     margin: auto;
     text-align: center;
+}
+
+.options {
+    background: #dcd6bc;
+    padding: .5rem;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+.options select{
+    font-size: 1rem;
+    padding: .25rem;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 .grid {

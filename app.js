@@ -3,13 +3,16 @@ const grid = document.querySelector('.grid');
 const flagsLeft = document.querySelector('.flags_left');
 const result = document.querySelector('.result');
 const refresh = document.querySelector('#refresh');
+const difficulty = document.querySelector('#difficulty');
 let width;
+let level;
 let numberBombs;
 let cells;
 let flags;
 let isGameOver;
 
 refresh.addEventListener('click', newGame);
+difficulty.addEventListener('change', newGame);
 
 // Start new game
 function newGame() {
@@ -19,7 +22,13 @@ function newGame() {
 
     // (Re)Setting all variables
     width = 10;
-    numberBombs = 10;
+
+    // Deciding number of bombs based on difficulty level
+    level = difficulty.value;
+    if(level === 'easy') numberBombs = 10;
+    if(level === 'medium') numberBombs = 15;
+    if(level === 'hard') numberBombs = 20;
+
     cells = [];
     flags = 0;
     isGameOver = false;
