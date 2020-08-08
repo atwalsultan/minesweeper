@@ -1,9 +1,10 @@
 // Selecting elements and declaring global variables
-const grid = document.querySelector('.grid');
-const flagsLeft = document.querySelector('.flags_left');
-const result = document.querySelector('.result');
-const refresh = document.querySelector('#refresh');
+const audio = document.querySelector('#audio');
 const difficulty = document.querySelector('#difficulty');
+const flagsLeft = document.querySelector('.flags_left');
+const refresh = document.querySelector('#refresh');
+const grid = document.querySelector('.grid');
+const result = document.querySelector('.result');
 let width;
 let level;
 let numberBombs;
@@ -11,11 +12,19 @@ let cells;
 let flags;
 let isGameOver;
 
+// Adding event listeners to elements
 refresh.addEventListener('click', newGame);
 difficulty.addEventListener('change', newGame);
 
+// Main inmplementation
+newGame();
+
+// Functions
 // Start new game
 function newGame() {
+    // Stop previously playing sound (if any)
+    audio.setAttribute('src', '');
+    
     // Getting rid of the old grid
     grid.innerHTML = '';
     result.innerHTML = '';
@@ -93,8 +102,6 @@ function newGame() {
         }
     }
 }
-
-newGame();
 
 // Add flag with right click
 function addFlag(cell) {
@@ -197,6 +204,8 @@ function checkCell(cell, currentId) {
 
 // Game Over
 function gameOver(cell) {
+    audio.setAttribute('src', 'sounds/game_over.mp3');
+    audio.play();
     result.innerHTML = 'GAME OVER!';
     isGameOver = true;
 
