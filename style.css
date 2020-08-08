@@ -28,7 +28,7 @@ header h1{
 
 .options {
     background: #dcd6bc;
-    padding: .25rem 0 0 .5rem;
+    padding-top: .5rem;
 }
 
 .options select {
@@ -44,36 +44,22 @@ header h1{
 .flags {
     font-size: 25px;
     display: inline-block;
-    margin-left: 3rem;
-}
-
-.btn {
-    padding: 0.4rem 0.8rem;
-    margin: 0;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #1b9b1b;
-    border-radius: 5px;
-    transition: 0.15s all; 
-}
-
-.btn:hover {
-    opacity: 0.85;
-}
-
-.btn:active { 
-    transform: scale(0.9); 
+    margin-left: 5rem;
 }
 
 #refresh {
-    margin-left: 3rem;
+    font-size: 25px;
+    margin-left: 4.5rem;
+    cursor: pointer;
 }
 
-i {
-    margin-right: 5px;
+#refresh:active {
+    transform: scale(0.9); 
+}
+
+#sound {
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .grid {

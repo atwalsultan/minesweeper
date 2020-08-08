@@ -3,6 +3,7 @@ const audio = document.querySelector('#audio');
 const difficulty = document.querySelector('#difficulty');
 const flagsLeft = document.querySelector('.flags_left');
 const refresh = document.querySelector('#refresh');
+const sound = document.querySelector('#sound');
 const grid = document.querySelector('.grid');
 const result = document.querySelector('.result');
 let width;
@@ -11,10 +12,25 @@ let numberBombs;
 let cells;
 let flags;
 let isGameOver;
+let playSound = true;
 
 // Adding event listeners to elements
-refresh.addEventListener('click', newGame);
 difficulty.addEventListener('change', newGame);
+refresh.addEventListener('click', newGame);
+sound.addEventListener('click', () => {
+    if(sound.innerHTML === '🔊') {
+        // Stop previously playing sound (if any)
+        audio.setAttribute('src', '');
+        
+        sound.innerHTML = '🔇';
+        playSound = false;
+    }
+    else if(sound.innerHTML === '🔇') {
+        sound.innerHTML = '🔊';
+        playSound = true;
+    }
+
+});
 
 // Main inmplementation
 newGame();
@@ -204,8 +220,12 @@ function checkCell(cell, currentId) {
 
 // Game Over
 function gameOver(cell) {
-    audio.setAttribute('src', 'sounds/game_over.mp3');
-    audio.play();
+    // Play sound
+    if(playSound) {
+        audio.setAttribute('src', 'sounds/game_over.mp3');
+        audio.play();
+    }
+    
     result.innerHTML = 'GAME OVER!';
     isGameOver = true;
 
