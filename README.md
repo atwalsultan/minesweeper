@@ -1,14 +1,16 @@
 ## Minesweeper
 
-The classic Minesweeper game. Built using Vanilla JavaScript, HTML and CSS.
+The classic Minesweeper game. Built using Vanilla JavaScript, HTML and CSS. [Live Demo](https://atwalsultan.github.io/minesweeper/)
 
-## Project Specifications/Features
+## Project Specifications & Features
 
 - Makes use of recursion to implement game logic.
-- Uses CSS grid layout to display cells.
 - Choose difficulty level (number of bombs) from a dropdown list.
-- Start a new game by clicking the _Refresh_ button.
-- Fully responsive to changes in window size.
+- Start a new game by clicking the refresh icon.
+- Sound effects on various outcomes and actions.
+- Mute/unmute by clicking the speaker icon.
+- Smooth transitions and animations on various actions.
+- Uses CSS grid layout to display cells.
 
 ## Rules
 
