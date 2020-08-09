@@ -35,10 +35,13 @@ sound.addEventListener('click', () => {
 });
 
 // Main inmplementation
-container.style.top = '50%';
 setTimeout(function() {
-    header.style.opacity = '1';
-},2000);
+    container.style.top = '50%';
+    setTimeout(function() {
+        header.style.opacity = '1';
+    },2000);
+}, 5);
+
 newGame();
 
 // Functions
