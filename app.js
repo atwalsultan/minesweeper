@@ -1,5 +1,7 @@
 // Selecting elements and declaring global variables
 const audio = document.querySelector('#audio');
+const header = document.querySelector('header h1');
+const container = document.querySelector('.container');
 const difficulty = document.querySelector('#difficulty');
 const flagsLeft = document.querySelector('.flags_left');
 const refresh = document.querySelector('#refresh');
@@ -33,6 +35,10 @@ sound.addEventListener('click', () => {
 });
 
 // Main inmplementation
+container.style.top = '50%';
+setTimeout(function() {
+    header.style.opacity = '1';
+},2000);
 newGame();
 
 // Functions
@@ -43,7 +49,11 @@ function newGame() {
     
     // Getting rid of the old grid
     grid.innerHTML = '';
-    result.innerHTML = '';
+    // Hiding old result
+    result.style.opacity = '0';
+    setTimeout(function() {
+        result.innerHTML = '';
+    },1000);
 
     // (Re)Setting all variables
     width = 10;
@@ -227,6 +237,7 @@ function gameOver(cell) {
     }
     
     result.innerHTML = 'GAME OVER!';
+    result.style.opacity = '1';
     isGameOver = true;
 
     // Show all bombs
@@ -248,6 +259,7 @@ function checkWin() {
         }
         if(matches === numberBombs) {
             result.innerHTML = 'YOU WIN!';
+            result.style.opacity = '1';
             isGameOver = true;
             break;
         }
