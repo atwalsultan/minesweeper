@@ -1,5 +1,6 @@
 // Selecting elements and declaring global variables
 const audio = document.querySelector('#audio');
+const loader = document.querySelector('.loader');
 const header = document.querySelector('header h1');
 const container = document.querySelector('.container');
 const difficulty = document.querySelector('#difficulty');
@@ -35,12 +36,27 @@ sound.addEventListener('click', () => {
 });
 
 // Main inmplementation
-setTimeout(function() {
-    container.style.top = '50%';
-    setTimeout(function() {
-        header.style.opacity = '1';
-    },2000);
-}, 5);
+setTimeout(() => {
+    loader.style.opacity = 0;
+    setTimeout(() => {loader.style.display = 'none'}, 1000);
+
+    header.style.display = 'block';
+    container.style.display = 'block';
+
+    setTimeout(() => {
+        container.style.top = '50%';
+        setTimeout(function() {
+            header.style.opacity = '1';
+        },2000);
+    }, 25);
+}, 3000);
+
+// setTimeout(function() {
+//     container.style.top = '50%';
+//     setTimeout(function() {
+//         header.style.opacity = '1';
+//     },2000);
+// }, 25);
 
 newGame();
 
