@@ -5,11 +5,11 @@
 }
 
 body {
-    margin: 20px;
+    text-align: center;
     background: #333;
     font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
 }
-
 .loader {
     position: absolute;
     top: 45%;
@@ -39,37 +39,32 @@ body {
     animation-delay: 0.4s;
 }
 
-header h1{
-    display: none;
-    color: #fff;
-    font-size: 3rem;
-    text-align: center;
-    font-family: 'Arial', Helvetica, sans-serif;
-    opacity: 0;
-    transition: all 2s ease-in-out;
+.container {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 340px;
+    transition: top 2s ease-in-out;
 }
 
-.container {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: -50%;
-    transform: translate(-50%, -50%);
-    backface-visibility: hidden;
-    transition: all 2s ease-in-out;
-    max-width: 425px;
-    margin: auto;
-    text-align: center;
+.heading{
+    opacity: 0;
+    transition: opacity 2s ease-in;
+    margin: 1rem;
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .options {
     background: #dcd6bc;
-    padding-top: .5rem;
+    padding: .25rem;
 }
 
 .options select {
     background-color: #f4f4f4;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: .25rem;
     outline: none;
     border-radius: 5px;
@@ -78,15 +73,15 @@ header h1{
 }
 
 .flags {
-    font-size: 25px;
+    font-size: 1.3rem;
     display: inline-block;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
 
 #refresh {
-    font-size: 25px;
-    margin-left: 4.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    margin-left: 3.5rem;
 }
 
 #refresh:active {
@@ -94,24 +89,23 @@ header h1{
 }
 
 #sound {
+    font-size: 1.3rem;
     cursor: pointer;
-    font-size: 25px;
 }
 
 .grid {
-    border: #dcd6bc solid .5rem;
+    border: #dcd6bc solid .3rem;
     background: #dcd6bc;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    margin-bottom: 1rem;
 }
 
 .grid div {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     border: 5px solid;
     border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
-    font-size: 25px;
+    font-size: 1.25rem;
 }
 
 div.checked {
@@ -120,18 +114,13 @@ div.checked {
     background-color: #cecab7;
 }
 
-footer {
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    transform: translate(-50%);
-}
-
 .result {
-    opacity: '0';
+    opacity: 0;
+    margin: 1rem;
+    height: 2.5rem;
     color: #e76346;
     font-size: 2.5rem;
-    transition: all 1s ease-in-out;
+    transition: opacity .5s ease-out;
 }
 
 @keyframes bounce {

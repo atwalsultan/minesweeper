@@ -1,8 +1,8 @@
 // Selecting elements and declaring global variables
 const audio = document.querySelector('#audio');
 const loader = document.querySelector('.loader');
-const header = document.querySelector('header h1');
 const container = document.querySelector('.container');
+const heading = document.querySelector('.heading');
 const difficulty = document.querySelector('#difficulty');
 const flagsLeft = document.querySelector('.flags_left');
 const refresh = document.querySelector('#refresh');
@@ -35,32 +35,21 @@ sound.addEventListener('click', () => {
 
 });
 
-// Main inmplementation
-setTimeout(() => {
-    loader.style.opacity = 0;
-    setTimeout(() => {loader.style.display = 'none'}, 1000);
-
-    header.style.display = 'block';
-    container.style.display = 'block';
-
+// Initialization on page load
+function init() {
+    newGame();
     setTimeout(() => {
+        loader.style.opacity = 0;
         container.style.top = '50%';
-        setTimeout(function() {
-            header.style.opacity = '1';
-        },2000);
-    }, 25);
-}, 3000);
+        setTimeout(() => {
+            heading.style.opacity = '1';
+        }, 2000);
+        setTimeout(() => {loader.style.display = 'none'}, 1000);
+    }, 3000);
+}
 
-// setTimeout(function() {
-//     container.style.top = '50%';
-//     setTimeout(function() {
-//         header.style.opacity = '1';
-//     },2000);
-// }, 25);
+init();
 
-newGame();
-
-// Functions
 // Start new game
 function newGame() {
     // Stop previously playing sound (if any)
@@ -68,11 +57,8 @@ function newGame() {
     
     // Getting rid of the old grid
     grid.innerHTML = '';
-    // Hiding old result
     result.style.opacity = '0';
-    setTimeout(function() {
-        result.innerHTML = '';
-    },1000);
+    setTimeout(() => {result.innerHTML = ''}, 1000);
 
     // (Re)Setting all variables
     width = 10;

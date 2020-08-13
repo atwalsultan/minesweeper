@@ -9,17 +9,17 @@
 </head>
 <body>
     <audio id="audio"></audio>
-    <!-- Loader -->
+    
     <div class="loader">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    
-    <header>
-        <h1>Minesweeper</h1>
-    </header>
+
     <div class="container">
+
+        <h1 class="heading">Minesweeper</h1>
+
         <div class="options">
             <select id="difficulty">
                 <option value="easy">Easy</option>
@@ -32,15 +32,12 @@
             <i class="fas fa-redo" id="refresh"></i>
             <span id="sound">🔊</span>
         </div>
-        
+
         <div class="grid"></div>
     
-        
-    </div>
-    <footer>
         <div class="result"></div>
-    </footer>
+    </div>
 
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
