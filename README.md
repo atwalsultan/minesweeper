@@ -23,3 +23,7 @@ The classic Minesweeper game. Built using Vanilla JavaScript, HTML and CSS. [Liv
 
 1. Download or clone repository.
 2. Open _index.html_ file in browser.
+
+## Acknowledgements
+
+This project is based on a YouTube video titled _Build Minesweeper with JavaScript_ by _Ania Kubow_ on _Traversy Media_'s channel.
